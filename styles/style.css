@@ -69,3 +69,34 @@ a {
 .content__text-block > .content__paragraph:not(:last-child) {
   padding-block-end: 1.5em;
 }
+
+.content__blockquote {
+  inline-size: 75%;
+  margin-block-end: 1.5em;
+  font-style: italic;
+  text-align: left;
+  margin-inline: auto;
+  line-height: 2em;
+}
+
+.content__list li {
+  position: relative;
+  list-style: none;
+  padding-inline-start: 40px;
+}
+
+.content__list li:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+.content__list li::before {
+  position: absolute;
+  inset: 0 10px;
+  content: '';
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background-image: url("/images/marker-light.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
