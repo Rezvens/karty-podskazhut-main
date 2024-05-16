@@ -22,7 +22,7 @@ a {
 
 :root {
   --bg-color: #F3EFEC;
-  --accent-color:;
+  --accent-color: #FFAB6B;
   --text-color: #312A4E;
   --main-font: Raleway, sans-serif;
   --accent-font: 'STIX Two Text', sans-serif;
@@ -30,6 +30,7 @@ a {
 
 .page {
   min-inline-size: 360px;
+  max-inline-size: 1440px;
   min-block-size: 360px;
   margin: 0;
   background-color: var(--bg-color, #fff);
@@ -99,4 +100,31 @@ a {
   background-image: url("/images/marker-light.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+   background-color: var(--accent-color);
+   display: inline-block;
+   width: 100px;
+   font-size: 30px;
+   font-weight: 700;
+   padding: 0 4px;
+   margin-right: 1px;
+}
+
+.content__figure {
+  margin-block: 7%;
+  inline-size: calc(100% + 7% * 2);
+  position: relative;
+  inset: 0 -7%;
+}
+
+.content__picture {
+  inline-size: 100%;
+}
+
+.content__picture-caption {
+  font-size: 18px;
+  text-align: center;
+  padding-block: 20px;
 }
