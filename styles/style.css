@@ -29,10 +29,11 @@ a {
 }
 
 .page {
+  /* display: flex;
+  flex-direction: column; */
   min-inline-size: 360px;
   max-inline-size: 1440px;
-  min-block-size: 360px;
-  margin: 0;
+  margin: 0 auto;
   background-color: var(--bg-color, #fff);
   color: var(--text-color, #000);
   font-family: var(--main-font);
@@ -95,6 +96,7 @@ a {
   inset: 0 10px;
   content: '';
   display: inline-block;
+  margin-block: auto;
   inline-size: 15px;
   block-size: 15px;
   background-image: url("/images/marker-light.svg");
@@ -114,9 +116,9 @@ a {
 
 .content__figure {
   margin-block: 7%;
-  inline-size: calc(100% + 7% * 2);
+  inline-size: calc(100% + 5vi * 2);
   position: relative;
-  inset: 0 -7%;
+  inset: 0 -5vi;
 }
 
 .content__picture {
@@ -127,4 +129,22 @@ a {
   font-size: 18px;
   text-align: center;
   padding-block: 20px;
+  border-block-end: solid var(--text-color) 1px;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  margin-block: auto;
+
+  block-size: 1080px;
+  border: solid var(--text-color) 1px;
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  text-align: center;
 }
