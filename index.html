@@ -14,6 +14,17 @@
   <body class="page theme_dark">
     <header class="header">
       <h1 class="content-section header__title heading">Карты подскажут</h1>
+      <nav class="header__menu content-section ">
+        <div class="header__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="135" height="25">
+            <use href="./images/logo.svg#logo"></use>
+          </svg>
+        </div>
+        <ul class="header__theme-toggler">
+          <button class="header__theme-button header__theme-button_type_dark">Тёмная</button>
+          <button disabled class="header__theme-button header__theme-button_type_light header__theme-button_is-active">Светлая</button>
+        </ul>
+      </nav>
     </header>
     <main class="content content-section">
       <div class="content__text-block content__text-block_type_first-lettered">
@@ -47,6 +58,10 @@
         <p class="content__paragraph">Таким образом, колода Ино поощряет нас видеть препятствия не как тупики, а как отправные точки для поиска более интересных решений.</p>
         <p class="content__paragraph">И кстати, сейчас необязательно охотиться за редкими физическими колодами Oblique Strategies — тем более, что их моментально разбирают фанаты Ино. Есть довольно симпатичные веб-сайты с диджитал-эквивалентами карточек и приложения для <a target="_blank" href="https://apps.apple.com/us/app/oblique-strategies-se/id1104927011">iOS</a> и <a target="_blank" href="https://play.google.com/store/apps/details?id=com.monoloco.obliquestrategies&hl=en_US&gl=US&pli=1">Android</a>.</p>
       </div>
+      <article class="content__card">
+        <h3 class="content__card-title heading">Use an <span class="colored-text">old idea</span></h3>
+        <p class="content__card-subtitle">Воспользуйтесь старой идеей</p>
+      </article>
       <div>
         <h2 class="heading content__title">Кто пользовался Oblique Strategies</h2>
         <p class="content__paragraph">
@@ -59,9 +74,11 @@
         </p>
       </div class="content__text-block">
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p class="footer__copyright">VЁRSTKA</p>
+    </footer>
 
     <!-- Раскомментируйте строчку ниже, когда вёрстка будет готова. Если вы назвали все классы. как нужно, переключатель темы будет работать -->
-    <!-- <script src="./scripts/theme-changer.js"></script> -->
+    <script src="./scripts/theme-changer.js"></script>
   </body>
 </html>

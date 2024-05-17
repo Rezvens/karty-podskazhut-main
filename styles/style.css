@@ -20,6 +20,14 @@ a {
   color: inherit;
 }
 
+a:hover {
+  text-decoration-color: color-mix(in srgb, var(--text-color), transparent 50%);
+}
+
+a:focus-visible {
+  outline: solid var(--text-color) 1px; 
+}
+
 :root {
   --bg-color: #F3EFEC;
   --accent-color: #FFAB6B;
@@ -38,8 +46,75 @@ a {
   font-family: var(--main-font);
 }
 
+.theme_dark {
+  --bg-color: #000;
+  --text-color: #B3B3B3;
+  --accent-color: transparent;
+}
+
 .header {
   padding-block-start: 10%;
+}
+
+.header__menu {
+  border-block: solid var(--text-color) 1px;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 20px;
+}
+
+.header__theme-toggler {
+  position: relative;
+  margin-block: auto;
+}
+
+.header__theme-button {
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--text-color);
+  border: none;
+  background-color: transparent;
+}
+
+.header__theme-button:hover {
+  cursor: pointer;
+}
+
+.header__theme-button:focus-visible {
+  outline: solid var(--text-color) 1px;
+}
+
+.header__theme-button:not(.header__theme-button_is-active):hover {
+  text-decoration: underline color-mix(in srgb, var(--text-color), transparent 50%) 1px;
+}
+
+
+
+.header__theme-button_type_dark {
+
+}
+
+.header__theme-button_type_light {
+
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: var(--accent-color);
+  block-size: 0.3em;
+  inline-size: 40%;
+  z-index: -1;
+  inset: 13px 121px;
+}
+
+.theme_dark .theme_dark .header__theme-button_is-active::after {
+
 }
 
 .heading {
@@ -102,6 +177,10 @@ a {
   background-repeat: no-repeat;
 }
 
+.theme_dark .content__list li::before {
+  background-image: url("/images/marker-dark.svg");
+}
+
 .content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
    background-color: var(--accent-color);
    display: inline-block;
@@ -112,11 +191,15 @@ a {
    margin-right: 1px;
 }
 
+.theme_dark .content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+  border: solid var(--text-color) 1px;
+}
+
 .content__figure {
   margin-block: 7%;
-  inline-size: calc(100% + 7% * 2);
+  inline-size: calc(100% + 5vi * 2);
   position: relative;
-  inset: 0 -7%;
+  inset: 0 -5vi;
 }
 
 .content__picture {
@@ -127,4 +210,46 @@ a {
   font-size: 18px;
   text-align: center;
   padding-block: 20px;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid var(--text-color) 1px;
+  block-size: calc(3 / 4 * 90vi);
+  margin-block-start: 7%;
+}
+
+.content__card-title {
+  position: relative;
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  font-size: 16px;
+}
+
+.colored-text::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: var(--accent-color);
+  block-size: 0.3em;
+  inline-size: 54%;
+  z-index: -1;
+  inset: 40px 194px;
+}
+
+.footer {
+  margin-block-start: 10%;
+  padding: 2.5%;
+  border-block-start: solid var(--text-color) 1px;
+}
+
+.footer__copyright {
+  font-family: inherit;
+  font-size: 18px;
+  text-align: center;
 }
